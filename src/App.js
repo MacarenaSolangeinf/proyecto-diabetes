@@ -23,14 +23,14 @@ class App extends Component {
     <option value='6'>Después de la merienda.</option>
     <option value='9'>Colación - Otro.</option>
     <option value='7'>Antes de cenar.</option>
-     <option value='8'>Después de cenar.</option>
+    <option value='8'>Después de cenar.</option>
        
     </Input>
     <br/>
    <br/>
    <br/>
    <br/>
-   <Button waves='light' >Guardar</Button>
+   <Button waves='light' >Registrar Medicion</Button>
    </Col>
   <Col s={4}>
   </Col>
