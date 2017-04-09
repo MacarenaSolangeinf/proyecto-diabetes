@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import App from './App';
 import './index.css';
-import Medicion from './Medicion';
+import Medicion from './App';
 
 ReactDOM.render(
- // <App />,
+
  <Medicion/>,
   document.getElementById('root')
 );

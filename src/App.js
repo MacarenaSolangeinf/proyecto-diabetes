@@ -1,45 +1,23 @@
 import React, { Component } from 'react';
-//import logo from './logo.svg';
-//import './App.css';
-import {Row,Col,Icon,Input,option,Button} from 'react-materialize';
+import Medicion from './Medicion/js/Medicion.js'
+import Historial from './Historial/js/Historial.js'
+import {Row,Col,Tabs,Tab,Input,option,Button,Table,Pagination,thead,tbody} from 'react-materialize';
 
 class App extends Component {
   render() {
     return (
   <Row>
-    <Col s={4}>
-           Registra tu Mediciòn
-           <br/>
-   <Input type="Mediciòn" label="Medicion" s={1} /> 
-   <br/>
-   <br/>
-   <br/>
-    <Input s={8} type='select' label="Descripcion" defaultValue='2'>
-    <option value='1'>Antes del desayuno.</option>
-    <option value='2'>Después del desayuno.</option>
-    <option value='3'>Antes del almuerzo..</option>
-    <option value='4'>Después del almuerzo.</option>
-    <option value='5'>Antes de la merienda.</option>
-    <option value='6'>Después de la merienda.</option>
-    <option value='9'>Colación - Otro.</option>
-    <option value='7'>Antes de cenar.</option>
-    <option value='8'>Después de cenar.</option>
-       
-    </Input>
-    <br/>
-   <br/>
-   <br/>
-   <br/>
-   <Button waves='light' >Registrar Medicion</Button>
-   </Col>
-  <Col s={4}>
-  </Col>
-  <Col s={4}>
-  </Col>
-  </Row>
- 
-
-      
+    <Col l={12} s={12}>
+      <Tabs className='tab-demo z-depth-1'>
+          <Tab title="Medición" active> 
+              <Medicion/>
+          </Tab>
+          <Tab title="Historial" >
+              <Historial/>
+          </Tab>
+      </Tabs>
+    </Col>
+  </Row>   
     );
   }
 }
