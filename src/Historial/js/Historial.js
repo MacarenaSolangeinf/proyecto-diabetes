@@ -24,7 +24,7 @@ class Historial extends Component {
             <td>No</td>
             <td>Si</td>
              
-            <td><Button waves='light' className="red" >Eliminar Medición</Button></td>
+            <td><Button waves='light' className="red" ><b>Eliminar Medición</b></Button></td>
             </tr>
       </tbody>
       </Table>    
