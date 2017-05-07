@@ -6,7 +6,7 @@ class Medicion extends Component {
     return (
         <Row>
             <Col l={12} s={12}>
-                <Col l={12 }s={9} offset="s3"> <h6>CONTROLA TU GLUCOSA</h6></Col>
+                <Col l={12 }s={9} offset="s3"> <h6><b>CONTROLA TU GLUCOSA</b></h6></Col>
                 <Col l={12}s={9} offset="s3">
                     <Input  label="Medición" S={12}/> 
                 </Col>
@@ -34,7 +34,7 @@ class Medicion extends Component {
                     <Input label="Insulina"  /> 
                 </Col>
                 <Col l={12} s={9} offset="s3">
-                    <Button waves='light' >Registrar Medición</Button>
+                    <Button waves='light' ><b>Registrar Medición</b></Button>
                 </Col>
         </Col>
     </Row>   
