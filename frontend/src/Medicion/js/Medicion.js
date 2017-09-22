@@ -8,7 +8,7 @@ class Medicion extends Component {
             <Col l={12} s={12}>
                 <Col l={12 }s={9} offset="s3"> <h6><b>CONTROLA TU GLUCOSA</b></h6></Col>
                 <Col l={12}s={9} offset="s3">
-                    <Input  label="Medición" S={12}/> 
+                    <Input  label="Medición" s={12}/> 
                 </Col>
                 <Col l={12} s={9} offset="s3">
                     <Input  type='select' label="Descripción" >
