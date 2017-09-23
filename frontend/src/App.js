@@ -4,6 +4,16 @@ import Historial from './Historial/js/Historial.js'
 import { Row, Col, Tabs, Tab } from 'react-materialize';
 
 class App extends Component {
+  state = {
+    data: []
+  }
+
+  componentDidMount() {
+    fetch('/data')
+      .then(res => res.json())
+      .then(data => this.setState({ data }));
+  }
+
   render() {
     return (
   <Row>
@@ -13,7 +23,7 @@ class App extends Component {
               <Medicion/>
           </Tab>
           <Tab title="Historial" >
-              <Historial/>
+              <Historial data={this.state.data} />
           </Tab>
       </Tabs>
     </Col>
