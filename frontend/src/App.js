@@ -1,33 +1,32 @@
 import React, { Component } from 'react';
 import Medicion from './Medicion/js/Medicion.js'
 import Historial from './Historial/js/Historial.js'
-import { Row, Col, Tabs, Tab } from 'react-materialize';
+import { Tabs, Tab } from 'material-ui/Tabs';
 
 class App extends Component {
-  state = {
-    data: []
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [],
+    };
   }
 
   componentDidMount() {
     fetch('/data')
       .then(res => res.json())
-      .then(data => this.setState({ data }));
+      .then(data => this.setState({ data: data }));
   }
 
   render() {
     return (
-  <Row>
-    <Col l={12} s={12}>
       <Tabs className='tab-demo z-depth-1'>
-          <Tab title="Medición" active> 
-              <Medicion/>
-          </Tab>
-          <Tab title="Historial" >
-              <Historial data={this.state.data} />
-          </Tab>
+        <Tab label="Medición" >
+          <Medicion />
+        </Tab>
+        <Tab label="Historial" >
+          <Historial data={this.state.data} />
+        </Tab>
       </Tabs>
-    </Col>
-  </Row>   
     );
   }
 }
