@@ -1,5 +1,11 @@
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('database', 'username', 'password', {
+var opts = {
+    define: {
+        //prevent sequelize from pluralizing table names
+        freezeTableName: true
+    }
+}
+var sequelize = new Sequelize('database', 'username', 'password', {
   host: 'localhost',
   dialect: 'sqlite',
 
@@ -8,10 +14,10 @@ const sequelize = new Sequelize('database', 'username', 'password', {
     min: 0,
     idle: 10000
   },
-
   // SQLite only
-  storage: '../../diabetes.db'
-});
+  storage: './diabetes.db'
+}
+);
 sequelize
   .authenticate()
   .then(() => {
@@ -20,6 +26,7 @@ sequelize
   .catch(err => {
     console.error('Unable to connect to the database:', err);
   });
+module.exports = sequelize;
 
 // Or you can simply use a connection uri
 //const sequelize = new Sequelize('postgres://user:pass@example.com:5432/dbname');

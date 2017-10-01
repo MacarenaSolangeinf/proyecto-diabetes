@@ -4,10 +4,10 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-require('./db/conecction.js');
+var sequelize = require('./db/conecction.js');
 var index = require('./routes/index');
 var data = require('./routes/data');
-
+require('./db/models/Medicion.js');
 var app = express();
 
 // view engine setup
